@@ -104,6 +104,15 @@ func (mr *MockProductInterfaceMockRecorder) GetPrice() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetPrice", reflect.TypeOf((*MockProductInterface)(nil).GetPrice))
 }
 
+//GetStatus mocks base method.
+func (m *MockProductInterface) GetStatus() string {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetStatus")
+	ret0, _ := ret[0].(string)
+	return ret0
+}
+
+
 // IsValid mocks base method.
 func (m *MockProductInterface) IsValid() (bool, error) {
 	m.ctrl.T.Helper()

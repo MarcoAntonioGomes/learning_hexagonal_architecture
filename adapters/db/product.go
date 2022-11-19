@@ -8,13 +8,17 @@ import (
 )
 
 type ProductDb struct {
-	Db *sql.DB
+	db *sql.DB
+}
+
+func NewProductDb(db *sql.DB) *ProductDb {
+	return &ProductDb{db: db}
 }
 
 func (p *ProductDb) Get(id string) (application.ProductInterface, error) {
 
 	var product application.Product
-	stmt, err := p.Db.Prepare("select id, name, price, status from products where id = ?")
+	stmt, err := p.db.Prepare("select id, name, price, status from products where id = ?")
 
 	if err != nil {
 		return nil, err
