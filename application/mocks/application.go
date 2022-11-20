@@ -90,6 +90,13 @@ func (mr *MockProductInterfaceMockRecorder) GetName() *gomock.Call {
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetName", reflect.TypeOf((*MockProductInterface)(nil).GetName))
 }
 
+// GetStatus indicates an expected call of GetStatus.
+func (mr *MockProductInterfaceMockRecorder) GetStatus() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetStatus", reflect.TypeOf((*MockProductInterface)(nil).GetStatus))
+}
+
+
 // GetPrice mocks base method.
 func (m *MockProductInterface) GetPrice() float64 {
 	m.ctrl.T.Helper()
