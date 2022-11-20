@@ -44,7 +44,7 @@ func TestProductService_Create(t *testing.T) {
 		Persistence: persistence,
 	}
 
-	result, err := service.Save("Product 1", 10)
+	result, err := service.Create("Product 1", 10)
 	require.Nil(t, err)
 	require.Equal(t, product, result)
 }

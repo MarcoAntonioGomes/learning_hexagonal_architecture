@@ -22,7 +22,7 @@ func (s *ProductService) Get(id string) (ProductInterface, error) {
 
 }
 
-func (s *ProductService) Save(name string, price float64) (ProductInterface, error) {
+func (s *ProductService) Create(name string, price float64) (ProductInterface, error) {
 
 	product := NewProduct()
 
